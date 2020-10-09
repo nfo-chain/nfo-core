@@ -1,0 +1,18 @@
+[patch.crates-io]
+# patch for substrate runtime module
+
+[profile.release]
+panic = "unwind"
+
+[workspace]
+members = [
+    "bin/node",
+    "bin/rpc-client",
+    "browser-testing",
+    "cli",
+    "executor",
+    "inspect",
+    "primitives",
+    "rpc",
+    "runtime",
+]
