@@ -1,0 +1,23 @@
+[package]
+name = "nfo-executor"
+version = "0.1.0"
+authors = ["nfo"]
+edition = "2018"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+trie-root = "0.16.0"
+sc-executor = { version = "0.8.0" }
+frame-benchmarking = { version = "2.0.0" }
+
+nfo-runtime = { path = "../runtime" }
+
+[features]
+wasmtime = [
+	"sc-executor/wasmtime",
+]
+wasmi-errno = [
+	"sc-executor/wasmi-errno",
+]

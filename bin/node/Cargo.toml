@@ -1,0 +1,11 @@
+[package]
+name = "node"
+version = "0.1.0"
+authors = ["Who"]
+edition = "2018"
+
+[dependencies]
+cli = { package = "nfo-cli", path = "../../cli" }
+
+[features]
+runtime-benchmarks = ["cli/runtime-benchmarks"]
